@@ -1,4 +1,4 @@
-title: 关于\_增加图片支持的测试\_
+title: 关于
 summary: 介绍本博客的基本功能
 authors: yanfzhai
 publish\_date: 2015-12-15

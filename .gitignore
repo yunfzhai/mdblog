@@ -1,3 +1,4 @@
 .idea
 static/out/*
+.DS_store
 *.pyc

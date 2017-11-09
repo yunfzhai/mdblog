@@ -1,3 +1,10 @@
+title: ReadMe
+summary: 介绍脚本实现方法
+authors: yanfzhai
+publish\_date: 2016-12-15
+tags: 方法使用
+	  Blog
+
 # 简介
 
 本工程是一个基于[Flask](http://flask.pocoo.org/)和[Python Markdown](https://pythonhosted.org/Markdown/)开发的简易博客。
