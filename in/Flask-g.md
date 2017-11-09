@@ -12,43 +12,61 @@ Flask中的g对象是个很好的东西，主要用于在一个请求的过程�
 
 ```python
 # encoding=utf-8
-from flask import Flask from flask import g import random
+from flask import Flask,g
+import random
 
 app = Flask(__name__)
 
-@app.before_request def set_on_g_object():
+@app.before_request 
+def set_on_g_object():
     x = random.randint(0,9)
     app.logger.debug('before request g.x is {x}'.format(x=x))
     g.x = x
 
-@app.route("/") def test():
+@app.route("/") 
+def test():
     g.x=1000
     return str(g.x)
 
-@app.after_request def get_on_g_object(response):
-    app.logger.debug('after request g.x is{g.x}'.format(g=g)) return response
+@app.after_request 
+def get_on_g_object(response):
+    app.logger.debug('after request g.x is{g.x}'.format(g=g)) 
+    return response
 ```
 
 # Flask中静态文件的处理
 
 ### 1.add_url_rule的用法
 
-   Flask中提供了url_for来实现创建url，只是生成一个url。在前面的博文中谈论过如果要生成一个css样式的静态文件的url需要使用url_for('static',filename='style.css')来创建相应的url。但是如果我有一个目录attachment的目录存放一些文件的话是没法通过url_for来生成的，默认url_for只可以为static和一些view_func建立url如果要想通过url_for为attachment来添加url就必须添加一个add_url_rule。
+Flask中提供了url_for来实现创建url，只是生成一个url。在前面的博文中谈论过如果要生成一个css样式的静态文件的url需要使用url_for('static',filename='style.css')来创建相应的url。但是如果我有一个目录attachment的目录存放一些文件的话是没法通过url_for来生成的，默认url_for只可以为static和一些view_func建立url如果要想通过url_for为attachment来添加url就必须添加一个add_url_rule。
 
 ```python
 # encoding=utf-8
-from flask import Flask from flask import g from flask import send_from_directory from flask import url_for import random
+from flask import Flask 
+from flask import g 
+from flask import send_from_directory 
+from flask import url_for 
+import random
 
 app = Flask(__name__)
 
-@app.route("/") def test(): return "url创建方式一"
+@app.route("/") 
+def test(): 
+    return "url创建方式一"
 
-def hello(): return "url创建方式二" app.add_url_rule("/index/",endpoint="hello",view_func=hello)
+def hello(): 
+    return "url创建方式二" 
 
-@app.route('/url1') def Create_url1(): return url_for('static',filename="style.css")
+app.add_url_rule("/index/",endpoint="hello",view_func=hello)
+
+@app.route('/url1') 
+def Create_url1(): 
+    return url_for('static',filename="style.css")
 
 app.add_url_rule('/attachment/<path:filename>',endpoint='attachment',build_only=True)
-@app.route('/url2') def Create_url2(): return url_for('attachment',filename="upload.txt")
+@app.route('/url2') 
+def Create_url2(): 
+    return url_for('attachment',filename="upload.txt")
 
 ```
 
@@ -60,11 +78,16 @@ send_from_directory主要用于下载文件：
 ```python
 
 # encoding=utf-8
-from flask import Flask from flask import g from flask import send_from_directory from flask import url_for import os.path
+from flask import Flask 
+from flask import g 
+from flask import send_from_directory 
+from flask import url_for import os.path
 
 app = Flask(__name__)
 dirpath = os.path.join(app.root_path,'upload')
-@app.route("/download/<path:filename>") def downloader(filename): return send_from_directory(dirpath,filename,as_attachment=True)
+@app.route("/download/<path:filename>") 
+def downloader(filename): 
+    return send_from_directory(dirpath,filename,as_attachment=True)
 
 ```
 
@@ -79,11 +102,15 @@ static_folder主要是用来改变url的目录的，默认是static，可以通�
 ```python
 
 # encoding=utf-8
-from flask import Flask from flask import g from flask import send_from_directory from flask import url_for import os.path
-
+from flask import Flask 
+from flask import g 
+from flask import send_from_directory 
+from flask import url_for 
+import os.path
 app = Flask(__name__,static_url_path="/test")
-
-@app.route("/") def static_create(): return url_for('static',filename='style.css')
+@app.route("/") 
+def static_create(): 
+    return url_for('static',filename='style.css')
 
 ```
 
