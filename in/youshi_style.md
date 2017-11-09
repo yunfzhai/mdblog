@@ -1,7 +1,7 @@
 title: 优势配置模型研究
 summary: 股票库变迁很大
 authors: yanfzhai
-publish\_date: 2016-10-15
+date: 2016-10-15
 tags: 优势配置
 	  投资方法
 

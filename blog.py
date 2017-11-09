@@ -22,22 +22,16 @@ def internal_error(error):
 
 @app.route("/favicon.ico")
 def get_favicon():
-    """favicon.ico
-    """
     return app.send_static_file("favicon.ico")
 
 
 @app.route("/")
 def page_index():
-    """页面-首页
-    """
     return render_template("index.html")
 
 
 @app.route("/about/")
 def page_about():
-    """页面-关于
-    """
     return app.send_static_file("out/About.html")
 
 

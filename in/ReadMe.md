@@ -1,7 +1,7 @@
 title: ReadMe
 summary: 介绍脚本实现方法
 authors: yanfzhai
-publish\_date: 2016-12-15
+date: 2016-12-15
 tags: 方法使用
 	  Blog
 

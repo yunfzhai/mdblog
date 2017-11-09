@@ -10,7 +10,6 @@ from settings import INDEX_DAT
 class IndexData(object):
     """索引数据类
     """
-
     _data = {}
 
     @classmethod

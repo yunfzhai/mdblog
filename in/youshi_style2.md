@@ -1,7 +1,7 @@
 title: 优势配置模型研究2
 summary: 特殊股票库导致特殊的方法
 authors: yanfzhai
-publish\_date: 2016-11-15
+date: 2016-11-15
 tags: 优势配置
 	  投资方法
 

@@ -27,7 +27,7 @@ def index_tags(tags, fid,info):
     # 为标签倒排索引添加标签,fid是拼音名字
     for tag in tags:
         if tag in info['tag_index']:
-            info['tag_index'].append(fid)
+            info['tag_index'][tag].append(fid)
         else:
             info['tag_index'][tag] = [fid]
 

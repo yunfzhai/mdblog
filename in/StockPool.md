@@ -1,7 +1,7 @@
 title: 公司股票库优选
 summary: 一、二、三级库有否价值
 authors: yanfzhai
-publish\_date: 2016-09-15
+date: 2016-09-15
 tags: 股票库划分
 	  投资方法
 

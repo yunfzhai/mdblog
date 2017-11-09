@@ -1,3 +1,10 @@
+title: 模型对比--从最大回撤的角度来看
+summary: 对比算法
+authors: yanfzhai
+date: 2015-12-15
+tags: 模型构建
+	    多层对比
+
 # 模型对比--从最大回撤的角度来看
 
 ![jjww](..\pics\perfect\read-1564105_960_720.jpg)

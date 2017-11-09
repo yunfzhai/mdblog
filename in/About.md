@@ -1,7 +1,7 @@
 title: 关于
 summary: 介绍本博客的基本功能
 authors: yanfzhai
-publish\_date: 2015-12-15
+date: 2015-12-15
 tags: 简介
 	  Markdown
 
