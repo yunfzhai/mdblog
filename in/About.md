@@ -7,7 +7,7 @@ tags: 简介
 
 # 关于本文
 
-本博客是本人（Yan）开发的一个基于Markdown的博客系统，支持基本的Markdown语法及一些常用的扩展语法。本文将对本博客所支持的Markdown语法做介绍。
+本博客是本人（Y）开发的一个基于Markdown的博客系统，支持基本的Markdown语法及一些常用的扩展语法。本文将对本博客所支持的Markdown语法做介绍。
 
 # Markdown基本语法
 
@@ -27,7 +27,7 @@ META支持作者为Markdown文件添加自定义的一些信息，这些自定�
 | title        | 文章标题     |
 | summary      | 摘要         |
 | author       | 作者         |
-| publish\_date | 文章发布日期 |
+| date | 文章发布日期 |
 | tags         | 标签         |
 
 **注意：**  
@@ -66,7 +66,7 @@ Markdown语法示例：
 |:-------|:---------|---------:|:------:|
 | 早上好 | 中午好   |   下午好 | 晚上好 |
 
-## pic图片支持
+## pic图片支持（目前不支持自动转换，要手动配置）
 ![](static/images/testd.jpg)
 
 [1]:	https://daringfireball.net/projects/markdown/syntax
