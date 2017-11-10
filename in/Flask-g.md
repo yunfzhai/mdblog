@@ -115,10 +115,8 @@ def static_create():
 ```
 
 ### 4.静态页面缓存和文件索引
-
 SEND_FILE_MAX_AGE_DEFAULT 这个变量用于配置静态文件缓存的时间，Flask默认缓存时间是12hours
 例如:app.comfig['SEND_FILE_MAX_AGE_DEFAULT']=2592000 将其缓存时间改为了30天。
 Flask不能实现文件索引的功能，也就是无法列出文件名，这个需要web server(Nginx 或 Apache)来实现。
-
 ### 5、session 对象
 session 也是一个 request context 的变量，但它把数据保存到了 cookie 中并发送到了客户端，客户端再次请求的时候又带上了cookie
